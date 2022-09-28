@@ -1,1 +1,1 @@
-https://yuriy0790.github.io/goit-markup-hw-06/
+https://yuriy0790.github.io/goit-markup-hw-07/
