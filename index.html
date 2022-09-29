@@ -461,69 +461,77 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="button" class="x-button cursor-pointer" data-modal-close>
-          <svg class="x-icon" width="18" height="18">
+        <button type="button" class="modal__x-button" data-modal-close>
+          <svg class="modal__x-icon" width="18" height="18">
             <use href="./images/sprite.svg#x-button"></use>
           </svg>
         </button>
-        <h2 class="contact-form-header">
+        <h2 class="modal__form-header">
           Залиште свої дані, ми вам передзвонимо
         </h2>
         <form
-          class="contact-form"
-          name="contact-form"
+          class="recall-form"
+          name="recall-form"
           autocomplete="on"
           novalidate
         >
-          <div class="contact-label-wrap">
-            <label class="contact-label" for="contact-name">Ім'я </label>
-            <div class="contact-wrap">
+          <div class="recall-form__item-wrap">
+            <label class="recall-form__input-label" for="contact-name"
+              >Ім'я
+            </label>
+            <div class="recall-form__input-wrap">
               <input
-                class="contact-input"
+                class="recall-form__input"
                 type="text"
                 name="contact-name"
                 id="contact-name"
                 placeholder=" "
               />
-              <svg class="contact-form-icon">
+              <svg class="recall-form__icon">
                 <use href="./images/sprite.svg#person-black"></use>
               </svg>
             </div>
           </div>
-          <div class="contact-label-wrap">
-            <label class="contact-label" for="contact-tel">Телефон </label>
-            <div class="contact-wrap">
+          <div class="recall-form__item-wrap">
+            <label class="recall-form__input-label" for="contact-tel"
+              >Телефон
+            </label>
+            <div class="recall-form__input-wrap">
               <input
-                class="contact-input"
+                class="recall-form__input"
                 type="tel"
                 name="contact-tel"
                 id="contact-tel"
                 placeholder=" "
-              /><svg class="contact-form-icon">
+              /><svg class="recall-form__icon">
                 <use href="./images/sprite.svg#phone-black"></use>
               </svg>
             </div>
           </div>
-          <div class="contact-label-wrap">
-            <label class="contact-label" for="contact-email">Пошта </label>
-            <div class="contact-wrap">
+          <div class="recall-form__item-wrap">
+            <label class="recall-form__input-label" for="contact-email"
+              >Пошта
+            </label>
+            <div class="recall-form__input-wrap">
               <input
-                class="contact-input"
+                class="recall-form__input"
                 type="email"
                 name="contact-email"
                 id="contact-email"
                 placeholder=" "
-              /><svg class="contact-form-icon">
+              /><svg class="recall-form__icon">
                 <use href="./images/sprite.svg#email-black"></use>
               </svg>
             </div>
           </div>
-          <div class="comment-wrapper">
-            <label class="contact-label" for="contact-comment">Коментар </label>
+          <div class="recall-form__item-wrap">
+            <label class="recall-form__input-label" for="contact-comment"
+              >Коментар
+            </label>
             <textarea
               cols="30"
               rows="5"
-              class="contact-comment-input"
+              class="recall-form__comment-input"
               type="textarea"
               name="contact-comment"
               id="contact-comment"
@@ -531,20 +539,18 @@
             ></textarea>
           </div>
 
-          <label class="contact-checkbox-label" for="policy"
+          <label class="recall-form__policy-label" for="policy"
             ><input
-              class="contact-policy"
+              class="recall-form__policy-input"
               type="checkbox"
               name="policy"
               id="policy"
             />
-            <span class="check-icon"></span> Погоджуюся з розсилкою та
-            приймаю&nbsp
-            <a class="policy-link" href=""> Умови договору</a>
+            <span class="recall-form__check-icon"></span> Погоджуюся з розсилкою
+            та приймаю&nbsp
+            <a class="recall-form__policy-link" href=""> Умови договору</a>
           </label>
-          <button class="contact-button cursor-pointer" type="submit">
-            Підписатися
-          </button>
+          <button class="recall-form__button" type="submit">Підписатися</button>
         </form>
       </div>
     </div>
