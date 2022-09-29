@@ -462,13 +462,13 @@ body {
 
 /* СТРАНИЦА ПОРТФОЛИО */
 /* Кнопки фильтра превью проектов*/
-.filter-buttons-list {
+.filter {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.filter-buttons-list .filter-button {
+.filter__button {
   padding-top: 6px;
   padding-bottom: 6px;
   padding-right: 22px;
@@ -487,29 +487,29 @@ body {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-.filter-buttons-list .filter-button:focus,
-.filter-buttons-list .filter-button:hover {
+.filter__button:focus,
+.filter__button:hover {
   color: var(--title-secondary-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.filter-buttons-list .list-item:not(:last-child) {
+.filter__list-item:not(:last-child) {
   margin-right: 8px;
 }
-.filter-button.little-button {
+.filter__button--little {
   padding-right: 25px;
   padding-left: 25px;
 }
 
 /* Секция превью проектов */
 
-.projects-preview-list {
+.projects {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
-.projects-preview-list .list-item {
+.projects__item {
   --card-gap: 30px;
   --card-count: 3;
   min-height: 404px;
@@ -517,37 +517,24 @@ body {
     (100% - (var(--card-gap) * (var(--card-count) - 1)) px) / var(--card-count)
   );
 }
-.project-container {
-  padding-top: 20px;
-  padding-bottom: 19px;
-  padding-left: 24px;
-  padding-right: 24px;
-  border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-}
-.projects-preview-list .project-link {
+
+.projects__link {
   display: block;
   transition: box-shadow 250ms var(--time-function);
 }
-.projects-preview-list .project-link:focus,
-.projects-preview-list .project-link:hover {
+.projects__link:focus,
+.projects__link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.project-img-thumb {
+.projects__thumb {
   position: relative;
   overflow: hidden;
   min-height: 294px;
   width: 100%;
 }
-.project-link:hover .project-title,
-.project-link:focus .project-title {
-  transform: translateY(0);
-}
-
-.project-img-thumb .project-title {
+.projects__descr-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -565,14 +552,29 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
-.projects-preview-list .project-preview-name {
+.projects__link:hover .projects__descr-overlay,
+.projects__link:focus .projects__descr-overlay {
+  transform: translateY(0);
+}
+
+.projects__meta {
+  padding-top: 20px;
+  padding-bottom: 19px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.projects__title {
   color: var(--title-primary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
-.projects-preview-list .project-type {
+.projects__type {
   color: var(--primary-text-color);
 
   margin-top: 4px;
