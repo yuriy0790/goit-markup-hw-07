@@ -129,7 +129,7 @@ body {
   color: var(--accent-color);
 }
 /* Формат логотипа в футере */
-.footer__logo {
+.logo--dark-theme {
   color: var(--title-secondary-text-color);
 }
 
@@ -581,72 +581,77 @@ body {
   line-height: calc(30 / 16);
 }
 /* Футер */
-.page-footer {
+.footer {
   background-color: var(--primary-background-color);
   padding-top: 60px;
   padding-bottom: 60px;
   min-width: 1200px;
 }
-
+.footer__overal-wrap {
+  display: flex;
+  align-items: baseline;
+}
 /* Адрес в футере*/
-.footer-contacts-area {
+
+.footer__address {
   margin-top: 20px;
   width: 231px;
 }
-.contact-footer {
+.footer__contact-item {
   display: block;
+}
+.footer__contact-item:nth-child(n + 2) {
   margin-top: 9px;
 }
-.contact-footer.address-footer {
-  color: var(--title-secondary-text-color);
-  margin-top: 0;
-}
-.contact-footer {
+
+.footer__contact {
+  display: block;
+
   color: rgb(255, 255, 255, 0.6);
   transition: color 250ms var(--time-function);
 
   font-style: normal;
   line-height: 1.5;
 }
-.contact-footer:focus,
-.contact-footer:hover {
+
+.footer__contact--white {
+  color: var(--title-secondary-text-color);
+}
+
+.footer__contact:focus,
+.footer__contact:hover {
   color: var(--accent-color);
 }
 /* Социальные сети в футере */
 
-.container-logo-address-social {
-  display: flex;
-  align-items: baseline;
-}
-.footer-social {
+.join-social {
   margin-left: 70px;
 }
-.footer-social-list {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  width: 206px;
-  margin-top: 20px;
-}
-.join-social {
+.join-social__title {
   color: var(--title-secondary-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
-.footer-social-list a {
+.join-social__social-list {
+  width: 206px;
+  margin-top: 20px;
+}
+
+.social-link--dark-theme {
   color: var(--page-background);
   background-color: rgba(255, 255, 255, 0.1);
 }
+
 /* Форма подписки в футере */
-.signup-form {
+.signup {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 93px;
+  margin-left: auto;
   width: 570px;
 }
-.signup-email-label {
+.signup__label {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -656,7 +661,7 @@ body {
 
   color: var(--title-secondary-text-color);
 }
-.signup-email-input {
+.signup__input {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -671,14 +676,14 @@ body {
 
   background-color: var(--primary-background-color);
 }
-.signup-email-input::placeholder {
+.signup__input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.signup-email-button {
+.signup__button {
   width: 200px;
   height: 50px;
   display: flex;
@@ -698,10 +703,10 @@ body {
   color: var(--title-secondary-text-color);
   transition: background-color 250ms var(--time-function);
 }
-.signup-email-button:hover {
+.signup__button:hover {
   background-color: #188ce8;
 }
-.signup-telegram-icon {
+.signup__icon {
   height: 24px;
   width: 24px;
   fill: currentColor;
