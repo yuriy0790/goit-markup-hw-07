@@ -84,13 +84,6 @@ body {
   background-color: var(--secondary-background-color);
 }
 
-/* Ставит флексбокс и центрирует содержимое */
-.flexing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 /* Ширина контентной области */
 .container {
   width: 1200px;
@@ -99,6 +92,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+/* Флекс контейнер с центрированием */
 .container--flex {
   display: flex;
   align-items: center;
@@ -141,19 +135,19 @@ body {
 }
 
 /* Навигация по сайту */
-.page-header__nav {
+.nav {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.page-header__list {
+.nav__list {
   display: flex;
   margin-left: 93px;
 }
-.page-header__item:not(:last-child) {
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
-.page-header__link {
+.nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -167,12 +161,12 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.page-header__link--current,
-.page-header__link:focus,
-.page-header__link:hover {
+.nav__link--current,
+.nav__link:focus,
+.nav__link:hover {
   color: var(--accent-color);
 }
-.page-header__link--current::after {
+.nav__link--current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -184,14 +178,15 @@ body {
 }
 
 /* Список контактов */
-.contact-list {
+.contacts {
   display: flex;
   margin-left: auto;
 }
-.icon-address {
-  margin-right: 10px;
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
 }
-.contact-list .contact {
+
+.contacts__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -206,18 +201,17 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.contact-list .contact:focus,
-.contact-list .contact:hover {
+.contacts__link:focus,
+.contacts__link:hover {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
-
-.contact-list .list-item:not(:last-child) {
-  margin-right: 50px;
+.contacts__icon {
+  margin-right: 10px;
 }
 
 /* Секция-герой */
-.hero-zone {
+.hero {
   height: 600px;
   max-width: 1600px;
   padding-top: 200px;
@@ -237,7 +231,7 @@ body {
   background-position: center;
   background-size: cover;
 }
-.hero-zone .hero-header {
+.hero__header {
   width: 696px;
   margin-left: auto;
   margin-right: auto;
@@ -250,8 +244,7 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-.hero-zone .hero-button {
-  /* display: inline-block; */
+.hero__button {
   min-width: 216px;
   padding: 10px 32px;
   margin-top: 30px;
@@ -269,13 +262,13 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
-.hero-zone .hero-button:hover,
-.hero-zone .hero-button:focus {
+.hero__button:hover,
+.hero__button:focus {
   background-color: #188ce8;
 }
 
 /* Секция Преимущества */
-.section.benefits-section {
+.section--pb0 {
   padding-bottom: 0;
 }
 .benefits-list {
@@ -283,19 +276,14 @@ body {
   flex-wrap: wrap;
   gap: 30px;
 }
-.benefits-list .list-item {
+.benefits-list__item {
   --card-gap: 30px;
   --card-count: 4;
   width: calc(
     (100% - (var(--card-gap) * (var(--card-count) - 1)) px) / var(--card-count)
   );
 }
-
-.benefit-icon {
-  width: 70px;
-  height: 70px;
-}
-.benefit-icon-container {
+.benefits-list__iconwrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,14 +295,19 @@ body {
   border-radius: 4px;
   border-color: transparent;
 }
-.benefits-list .benefit-header {
+.benefits-list__icon {
+  width: 70px;
+  height: 70px;
+}
+
+.benefits-list__title {
   color: var(--title-primary-text-color);
   /* font-weight: 700; значение для заголовков умолчанию*/
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
-.list-item .plaintext {
+.benefits-list__text {
   margin-top: 10px;
   /* font-weight: 400; значение для параграфа умолчанию */
   /* font-size: 14px; наследуется из боди */
