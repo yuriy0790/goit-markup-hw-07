@@ -13,15 +13,13 @@
 .nav__list {
   display: flex;
   margin-left: 93px;
+}
 
+.nav__item {
   &:not(:last-child) {
     margin-right: 50px;
   }
 }
-
-// .nav__item:not(:last-child) {
-//     margin-right: 50px;
-// }
 
 .nav__link {
   position: relative;

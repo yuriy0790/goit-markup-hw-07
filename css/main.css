@@ -396,7 +396,8 @@ body {
   display: flex;
   margin-left: 93px;
 }
-.nav__list:not(:last-child) {
+
+.nav__item:not(:last-child) {
   margin-right: 50px;
 }
 
