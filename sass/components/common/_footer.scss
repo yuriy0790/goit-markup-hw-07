@@ -54,30 +54,6 @@
   color: var(--title-secondary-text-color);
 }
 
-/* Социальные сети в футере */
-
-.join-social {
-  margin-left: 70px;
-}
-
-.join-social__title {
-  color: var(--title-secondary-text-color);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-}
-
-.join-social__social-list {
-  width: 206px;
-  margin-top: 20px;
-}
-
-.social-link--dark-theme {
-  color: var(--page-background);
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
 /* Форма подписки в футере */
 .signup {
   display: flex;
