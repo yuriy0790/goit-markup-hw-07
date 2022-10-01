@@ -1,21 +1,20 @@
 @import "./base/normalize";
 @import "./base/reset";
 @import "./utils/vars";
-@import "./components/body";
+@import "./components/common/body";
 @import "./utils/utils";
-@import "./components/header";
-@import "./components/logo";
-@import "./components/hero-section";
-@import "./components/benefits-section";
-@import "./components/works-section";
-@import "./components/team-section";
-@import "./components/clients-section";
+@import "./components/common/header";
+@import "./components/common/logo";
+@import "./components/studio/hero-section";
+@import "./components/studio/benefits-section";
+@import "./components/studio/works-section";
+@import "./components/studio/team-section";
+@import "./components/studio/clients-section";
 
-@import "./components/filter-buttons";
-@import "./components/projects-preview-section";
+@import "./components/portfolio/filter-buttons";
+@import "./components/portfolio/projects-preview-section";
 
-
-@import "./components/footer";
-@import "./components/backdrop-modal";
-@import "./components/recall-form";
+@import "./components/common/footer";
+@import "./components/common/backdrop-modal";
+@import "./components/common/recall-form";
 
