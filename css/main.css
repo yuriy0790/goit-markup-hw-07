@@ -372,14 +372,6 @@ body {
   background-color: var(--secondary-background-color);
 }
 
-/* Заголовки секций */
-.section-header {
-  color: var(--title-primary-text-color);
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
 /* Хедер */
 .page-header {
   border-bottom: 1px solid #ececec;
@@ -533,6 +525,14 @@ body {
 .social-link--dark-theme {
   color: var(--page-background);
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Заголовки секций */
+.section-header {
+  color: var(--title-primary-text-color);
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }
 
 /* Секция-герой */
