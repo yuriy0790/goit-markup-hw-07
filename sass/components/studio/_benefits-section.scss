@@ -10,11 +10,12 @@
 }
 
 .benefit-list__item {
-  --card-gap: 30px;
-  --card-count: 4;
-  width: calc(
-    (100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count)
-  );
+  // --card-gap: 30px;
+  // --card-count: 4;
+  // width: calc(
+  //   (100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count)
+  // );
+  @include card-width(30px, 4);
 }
 
 .benefit-list__iconwrap {
