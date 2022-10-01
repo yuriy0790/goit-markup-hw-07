@@ -1,9 +1,9 @@
 /* Заготовка на сетки карточек */
-// .card-template {
-//     --card-gap: 30px;
-//     --card-count: 4;
-//     width: calc((100% - (var(--card-gap) * (var(--card-count) - 1)) px) / var(--card-count));
-// }
+.card-template {
+    --card-gap: 30px;
+    --card-count: 4;
+    width: calc((100% - (var(--card-gap) * (var(--card-count) - 1)) ) / var(--card-count));
+}
 
 /* делает невидимым */
 .invisible {

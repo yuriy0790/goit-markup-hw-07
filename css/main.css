@@ -71,6 +71,12 @@ body {
 }
 
 /* Заготовка на сетки карточек */
+.card-template {
+  --card-gap: 30px;
+  --card-count: 4;
+  width: calc((100% - var(--card-gap) * (var(--card-count) - 1)) / var(--card-count));
+}
+
 /* делает невидимым */
 .invisible {
   display: block;
@@ -279,6 +285,12 @@ body {
   gap: 30px;
 }
 
+.benefit-list__item {
+  --card-gap: 30px;
+  --card-count: 4;
+  width: calc((100% - var(--card-gap) * (var(--card-count) - 1)) / var(--card-count));
+}
+
 .benefit-list__iconwrap {
   display: flex;
   justify-content: center;
@@ -323,6 +335,9 @@ body {
   position: relative;
   min-height: 294px;
   min-width: 370px;
+  --card-gap: 30px;
+  --card-count: 3;
+  width: calc((100% - var(--card-gap) * (var(--card-count) - 1)) / var(--card-count));
 }
 
 .work-list__title {
@@ -352,6 +367,9 @@ body {
 }
 
 .teammate {
+  --card-gap: 30px;
+  --card-count: 4;
+  width: calc((100% - var(--card-gap) * (var(--card-count) - 1)) / var(--card-count));
   background-color: var(--page-background);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -417,6 +435,12 @@ body {
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 50px;
+}
+
+.client-list__item {
+  --card-gap: 30px;
+  --card-count: 6;
+  width: calc((100% - var(--card-gap) * (var(--card-count) - 1)) / var(--card-count));
 }
 
 .client-list__link {
@@ -492,6 +516,9 @@ body {
 
 .projects__item {
   min-height: 404px;
+  --card-gap: 30px;
+  --card-count: 3;
+  width: calc((100% - var(--card-gap) * (var(--card-count) - 1)) / var(--card-count));
 }
 
 .projects__link {

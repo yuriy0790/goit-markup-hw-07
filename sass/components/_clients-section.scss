@@ -6,11 +6,11 @@
     margin-top: 50px;
 }
 
-// .client-list__item {
-//     --card-gap: 30px;
-//     --card-count: 6;
-//     width: calc((100% - (var(--card-gap) * (var(--card-count) - 1)) px) / var(--card-count));
-// }
+.client-list__item {
+    --card-gap: 30px;
+    --card-count: 6;
+    width: calc((100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count));
+}
 
 .client-list__link {
     display: flex;

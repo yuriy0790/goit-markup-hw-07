@@ -9,9 +9,9 @@
 .projects__item {
     min-height: 404px;
 
-    // --card-gap: 30px;
-    // --card-count: 3;
-    //    width: calc((100% - (var(--card-gap) * (var(--card-count) - 1)) px) / var(--card-count));
+    --card-gap: 30px;
+    --card-count: 3;
+       width: calc((100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count));
 }
 
 .projects__link {

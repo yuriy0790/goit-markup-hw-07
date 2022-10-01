@@ -10,9 +10,9 @@
     position: relative;
     min-height: 294px;
     min-width: 370px;
-    // --card-gap: 30px;
-    // --card-count: 3;
-    // width: calc((100% - (var(--card-gap) * (var(--card-count) - 1)) px) / var(--card-count));
+    --card-gap: 30px;
+    --card-count: 3;
+    width: calc((100% - (var(--card-gap) * (var(--card-count) - 1)) ) / var(--card-count));
 }
 
 .work-list__title {
