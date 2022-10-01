@@ -1,9 +1,13 @@
 .recall-form__item-wrap {
   margin-bottom: 10px;
+
+  &:last-of-type {
+    margin-bottom: 20px;
+  }
 }
-.recall-form__item-wrap:last-of-type {
-  margin-bottom: 20px;
-}
+// .recall-form__item-wrap:last-of-type {
+//   margin-bottom: 20px;
+// }
 .recall-form__input-label {
   display: block;
   margin-bottom: 4px;
@@ -31,6 +35,13 @@
   cursor: pointer;
   transition: border-color 250ms var(--time-function),
     outline-color 250ms var(--time-function);
+
+  &:hover,
+  &:focus,
+  &:not(:placeholder-shown) {
+    border-color: var(--accent-color);
+    outline-color: var(--accent-color);
+  }
 }
 
 .recall-form__comment-input {
@@ -46,15 +57,32 @@
   cursor: pointer;
   transition: border-color 250ms var(--time-function),
     outline-color 250ms var(--time-function);
-}
-.recall-form__comment-input::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: calc(14 / 12);
-  letter-spacing: 0.01em;
 
-  color: rgba(117, 117, 117, 0.5);
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  &:focus,
+  &:hover,
+  &:not(:placeholder-shown) {
+    border-color: var(--accent-color);
+    outline-color: var(--accent-color);
+  }
 }
+
+// .recall-form__comment-input::placeholder {
+//   font-weight: 400;
+//   font-size: 12px;
+//   line-height: calc(14 / 12);
+//   letter-spacing: 0.01em;
+
+//   color: rgba(117, 117, 117, 0.5);
+// }
 .recall-form__icon {
   width: 18px;
   height: 18px;
@@ -64,21 +92,29 @@
   transform: translateY(-50%);
   fill: var(--title-primary-text-color);
   transition: fill 250ms var(--time-function);
+
+  .recall-form__input:hover + &,
+  .recall-form__input:not(:placeholder-shown) + &,
+  .recall-form__input:focus + & {
+    fill: var(--accent-color);
+  }
 }
-.recall-form__input:hover + .recall-form__icon,
-.recall-form__input:not(:placeholder-shown) + .recall-form__icon,
-.recall-form__input:focus + .recall-form__icon {
-  fill: var(--accent-color);
-}
-.recall-form__comment-input:focus,
-.recall-form__comment-input:hover,
-.recall-form__comment-input:not(:placeholder-shown),
-.recall-form__input:hover,
-.recall-form__input:focus,
-.recall-form__input:not(:placeholder-shown) {
-  border-color: var(--accent-color);
-  outline-color: var(--accent-color);
-}
+
+// .recall-form__input:hover + .recall-form__icon,
+// .recall-form__input:not(:placeholder-shown) + .recall-form__icon,
+// .recall-form__input:focus + .recall-form__icon {
+//   fill: var(--accent-color);
+// }
+
+// .recall-form__comment-input:focus,
+// .recall-form__comment-input:hover,
+// .recall-form__comment-input:not(:placeholder-shown),
+// .recall-form__input:hover,
+// .recall-form__input:focus,
+// .recall-form__input:not(:placeholder-shown) {
+//   border-color: var(--accent-color);
+//   outline-color: var(--accent-color);
+// }
 
 .recall-form input[type="checkbox"] {
   appearance: none;
@@ -129,8 +165,13 @@
   border-color: transparent;
   color: var(--title-secondary-text-color);
   transition: background-color 250ms var(--time-function);
+
+  &:hover,
+  &:focus {
+    background: #188ce8;
+  }
 }
 
-.recall-form__button:hover {
-  background: #188ce8;
-}
+// .recall-form__button:hover {
+//   background: #188ce8;
+// }

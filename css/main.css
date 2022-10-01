@@ -318,8 +318,8 @@ button {
   --time-function: cubic-bezier(0.4, 0, 0.2, 1);
   --card-gap: 30px;
   --card-count: 4;
-  --main-font:"Roboto", sans-serif;
-  --logo-font:"Raleway", sans-serif;
+  --main-font: "Roboto", sans-serif;
+  --logo-font: "Raleway", sans-serif;
 }
 
 body {
@@ -396,8 +396,7 @@ body {
   display: flex;
   margin-left: 93px;
 }
-
-.nav__item:not(:last-child) {
+.nav__list:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -413,13 +412,13 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
-.nav__link--current,
-.nav__link:focus,
-.nav__link:hover {
+.nav__link:hover, .nav__link:focus {
   color: var(--accent-color);
 }
 
+.nav__link--current {
+  color: var(--accent-color);
+}
 .nav__link--current::after {
   position: absolute;
   bottom: 0;
@@ -454,9 +453,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-
-.contacts__link:focus,
-.contacts__link:hover {
+.contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -528,9 +525,7 @@ body {
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
-
-.hero__button:hover,
-.hero__button:focus {
+.hero__button:hover, .hero__button:focus {
   background-color: #188ce8;
 }
 
@@ -676,17 +671,15 @@ body {
   transition: color 250ms var(--time-function), background-color 250ms var(--time-function);
   outline: none;
 }
+.social-link:hover, .social-link:focus {
+  background-color: var(--accent-color);
+  color: var(--page-background);
+}
 
 .social-link__icon {
   height: 20px;
   width: 20px;
   fill: currentColor;
-}
-
-.social-link:focus,
-.social-link:hover {
-  background-color: var(--accent-color);
-  color: var(--page-background);
 }
 
 /* Постійні клієнти */
@@ -714,9 +707,7 @@ body {
   color: var(--icon-main-color);
   transition: color 250ms var(--time-function), border-color 250ms var(--time-function);
 }
-
-.client-list__link:focus,
-.client-list__link:hover {
+.client-list__link:hover, .client-list__link:focus {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -750,9 +741,7 @@ body {
   border: 1px solid transparent;
   border-radius: 4px;
 }
-
-.filter__button:focus,
-.filter__button:hover {
+.filter__button:hover, .filter__button:focus {
   color: var(--title-secondary-text-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -785,9 +774,7 @@ body {
   display: block;
   transition: box-shadow 250ms var(--time-function);
 }
-
-.projects__link:focus,
-.projects__link:hover {
+.projects__link:hover, .projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -802,7 +789,6 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  content: "";
   width: 100%;
   height: 100%;
   padding: 63px 24px;
@@ -813,9 +799,7 @@ body {
   color: var(--title-secondary-text-color);
   background-color: rgba(33, 150, 243, 0.9);
 }
-
-.projects__link:hover .projects__descr-overlay,
-.projects__link:focus .projects__descr-overlay {
+.projects__link:hover .projects__descr-overlay, .projects__link:focus .projects__descr-overlay {
   transform: translateY(0);
 }
 
@@ -867,7 +851,6 @@ body {
 .footer__contact-item {
   display: block;
 }
-
 .footer__contact-item:nth-child(n+2) {
   margin-top: 9px;
 }
@@ -879,14 +862,12 @@ body {
   font-style: normal;
   line-height: 1.5;
 }
+.footer__contact:hover, .footer__contact:focus {
+  color: var(--accent-color);
+}
 
 .footer__contact--white {
   color: var(--title-secondary-text-color);
-}
-
-.footer__contact:focus,
-.footer__contact:hover {
-  color: var(--accent-color);
 }
 
 /* Социальные сети в футере */
@@ -944,7 +925,6 @@ body {
   color: rgba(255, 255, 255, 0.6);
   background-color: var(--primary-background-color);
 }
-
 .signup__input::placeholder {
   font-weight: 400;
   font-size: 16px;
@@ -970,7 +950,6 @@ body {
   color: var(--title-secondary-text-color);
   transition: background-color 250ms var(--time-function);
 }
-
 .signup__button:hover {
   background-color: #188ce8;
 }
@@ -1004,7 +983,6 @@ body {
   border-radius: 4px;
   transition: transform 500ms var(--time-function);
 }
-
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.1);
 }
@@ -1025,13 +1003,12 @@ body {
   border-radius: 50%;
   transition: color 250ms var(--time-function);
 }
+.modal__x-button:hover, .modal__x-button:focus {
+  color: var(--accent-color);
+}
 
 .modal__x-icon {
   fill: currentColor;
-}
-
-.modal__x-button:hover {
-  color: var(--accent-color);
 }
 
 .is-hidden {
@@ -1051,7 +1028,6 @@ body {
 .recall-form__item-wrap {
   margin-bottom: 10px;
 }
-
 .recall-form__item-wrap:last-of-type {
   margin-bottom: 20px;
 }
@@ -1081,6 +1057,10 @@ body {
   cursor: pointer;
   transition: border-color 250ms var(--time-function), outline-color 250ms var(--time-function);
 }
+.recall-form__input:hover, .recall-form__input:focus, .recall-form__input:not(:placeholder-shown) {
+  border-color: var(--accent-color);
+  outline-color: var(--accent-color);
+}
 
 .recall-form__comment-input {
   text-align: start;
@@ -1093,13 +1073,16 @@ body {
   cursor: pointer;
   transition: border-color 250ms var(--time-function), outline-color 250ms var(--time-function);
 }
-
 .recall-form__comment-input::placeholder {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
+}
+.recall-form__comment-input:focus, .recall-form__comment-input:hover, .recall-form__comment-input:not(:placeholder-shown) {
+  border-color: var(--accent-color);
+  outline-color: var(--accent-color);
 }
 
 .recall-form__icon {
@@ -1112,21 +1095,8 @@ body {
   fill: var(--title-primary-text-color);
   transition: fill 250ms var(--time-function);
 }
-
-.recall-form__input:hover + .recall-form__icon,
-.recall-form__input:not(:placeholder-shown) + .recall-form__icon,
-.recall-form__input:focus + .recall-form__icon {
+.recall-form__input:hover + .recall-form__icon, .recall-form__input:not(:placeholder-shown) + .recall-form__icon, .recall-form__input:focus + .recall-form__icon {
   fill: var(--accent-color);
-}
-
-.recall-form__comment-input:focus,
-.recall-form__comment-input:hover,
-.recall-form__comment-input:not(:placeholder-shown),
-.recall-form__input:hover,
-.recall-form__input:focus,
-.recall-form__input:not(:placeholder-shown) {
-  border-color: var(--accent-color);
-  outline-color: var(--accent-color);
 }
 
 .recall-form input[type=checkbox] {
@@ -1179,7 +1149,6 @@ body {
   color: var(--title-secondary-text-color);
   transition: background-color 250ms var(--time-function);
 }
-
-.recall-form__button:hover {
+.recall-form__button:hover, .recall-form__button:focus {
   background: #188ce8;
 }/*# sourceMappingURL=main.css.map */

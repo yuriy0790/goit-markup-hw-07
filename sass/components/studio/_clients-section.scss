@@ -1,39 +1,47 @@
 /* Постійні клієнти */
 .client-list {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
-    margin-top: 50px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .client-list__item {
-    --card-gap: 30px;
-    --card-count: 6;
-    width: calc((100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count));
+  --card-gap: 30px;
+  --card-count: 6;
+  width: calc(
+    (100% - (var(--card-gap) * (var(--card-count) - 1))) / var(--card-count)
+  );
 }
 
 .client-list__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    height: 92px;
-    border: 1px solid var(--icon-main-color);
-    border-radius: 4px;
-    outline: none;
-    color: var(--icon-main-color);
-    transition: color 250ms var(--time-function),
-        border-color 250ms var(--time-function);
-}
+  height: 92px;
+  border: 1px solid var(--icon-main-color);
+  border-radius: 4px;
+  outline: none;
+  color: var(--icon-main-color);
+  transition: color 250ms var(--time-function),
+    border-color 250ms var(--time-function);
 
-.client-list__link:focus,
-.client-list__link:hover {
+  &:hover,
+  &:focus {
     color: var(--accent-color);
     border-color: var(--accent-color);
+  }
 }
 
+// .client-list__link:focus,
+// .client-list__link:hover {
+//     color: var(--accent-color);
+//     border-color: var(--accent-color);
+// }
+
 .client-list__icon {
-    height: 60px;
-    width: 106px;
-    fill: currentColor;
+  height: 60px;
+  width: 106px;
+  fill: currentColor;
 }
